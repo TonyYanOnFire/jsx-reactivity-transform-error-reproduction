@@ -56,8 +56,9 @@ const webpackConfig = {
         ]
     },
     plugins: [
+        require('unplugin-vue-macros/webpack')({}),
         new VueLoaderPlugin(),
-        new HtmlPlugin({ template: 'index.html', chunksSortMode: 'dependency' })
+        new HtmlPlugin({ template: 'index.html', chunksSortMode: 'dependency' }),
     ]
 };
 
